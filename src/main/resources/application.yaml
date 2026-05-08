@@ -1,6 +1,6 @@
 spring:
   application:
-    name: supermercado_jwt
+    name: supermercado_jfmn bvwt
 
   datasource:
     url: jdbc:mysql://turntable.proxy.rlwy.net:21589/railway
