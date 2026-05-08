@@ -9,6 +9,7 @@
 package com.andres.supermarket_jwt.entity;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -18,17 +19,19 @@ import lombok.Data;
 
 @Data
 @Table(name = "supplier")
+@Entity
 public class SupplierEntity {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
+    private Long id;
 
     @NotNull
-    @Column(name = "nit", length = 100, unique = true)
+    @Column( unique = true, length = 50, name = "nit")
     private String nit;
 
     @NotNull
-    @Column(name = "name", length = 100)
+    @Column( length = 100, name = "name")
     private String name;
 
 }
