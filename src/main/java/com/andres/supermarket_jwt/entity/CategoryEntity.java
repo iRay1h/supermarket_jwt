@@ -5,13 +5,13 @@
 
 package com.andres.supermarket_jwt.entity;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Size;
 import lombok.Data;
 
 @Data
@@ -24,7 +24,7 @@ public class CategoryEntity {
     private Long id;
 
     @NotNull
-    @Size(max = 100)
+    @Column(nullable = false, unique = true, length = 100 ,name = "name")
     private String name;
 
 }
