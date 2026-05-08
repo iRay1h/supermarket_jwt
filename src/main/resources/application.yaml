@@ -25,3 +25,11 @@ logging:
 
 server:
   port: 8080
+  servlet:
+    context-path: /api/v1/
+
+security:
+  jwt:
+    # Genera llave secreta con openssl rand -base64 32
+    secret-key: ImIq9nynVF/OwzGrdCn718/u/GtPauAxV1fjmoK06Ts=
+    token-expiration: 600000 # 10 min expresado en ms
